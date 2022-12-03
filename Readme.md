@@ -34,6 +34,8 @@ python -m python_coreml_stable_diffusion.torch2coreml --convert-unet --convert-t
 python -m python_coreml_stable_diffusion.pipeline --prompt "a photo of an astronaut riding a horse on mars" -i models -o data/raw --compute-unit ALL --seed 193
 ```
 
+![](data/processed/a_photo_of_an_astronaut_riding_a_horse_on_mars/randomSeed_193_computeUnit_ALL_modelVersion_CompVis_stable-diffusion-v1-4.png)
+
 ### Misc
 ```
 conda env export > environment.yml
