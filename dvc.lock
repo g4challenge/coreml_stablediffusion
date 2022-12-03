@@ -1,0 +1,5 @@
+schema: '2.0'
+stages:
+  convert_model:
+    cmd: python -m python_coreml_stable_diffusion.torch2coreml --convert-unet --convert-text-encoder
+      --convert-vae-decoder --convert-safety-checker -o models

@@ -25,10 +25,14 @@ dvc init
 ## Conversion Process
 
 ```bash
-python -m python_coreml_stable_diffusion.torch2coreml --convert-unet --convert-text-encoder --convert-vae-decoder --convert-safety-checker -o <output-mlpackages-directory>
+python -m python_coreml_stable_diffusion.torch2coreml --convert-unet --convert-text-encoder --convert-vae-decoder --convert-safety-checker -o models
 ```
 
+## Usage
 
+```bash
+python -m python_coreml_stable_diffusion.pipeline --prompt "a photo of an astronaut riding a horse on mars" -i models -o data/raw --compute-unit ALL --seed 193
+```
 
 ### Misc
 ```
