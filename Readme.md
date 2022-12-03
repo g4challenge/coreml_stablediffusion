@@ -18,6 +18,9 @@ huggingface-cli login
 
 ### DVC Experiment Tracking
 
+```bash
+dvc init
+```
 
 ## Conversion Process
 

@@ -3,4 +3,5 @@ diffusers[torch]
 torch
 transformers
 scipy
+dvc
 git+https://github.com/apple/ml-stable-diffusion
