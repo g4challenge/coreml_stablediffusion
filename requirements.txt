@@ -1,0 +1,6 @@
+coremltools
+diffusers[torch]
+torch
+transformers
+scipy
+git+https://github.com/apple/ml-stable-diffusion
