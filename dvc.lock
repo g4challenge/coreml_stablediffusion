@@ -9,16 +9,18 @@ stages:
       size: 2674410455
       nfiles: 12
   generate_images:
-    cmd: python -m python_coreml_stable_diffusion.pipeline --prompt "a photo of an
-      astronaut riding a horse on mars" -i models -o data/processed --compute-unit
-      ALL --seed 193
+    cmd: python -m python_coreml_stable_diffusion.pipeline -i models -o data/processed
+      --compute-unit ALL --seed 193 --prompt 'gandalf eating on a mountain top'
     deps:
     - path: models
       md5: 93df63a4f0fba8efa93b51297af4cd9b.dir
       size: 2674410455
       nfiles: 12
+    params:
+      params.yaml:
+        prompt: gandalf eating on a mountain top
     outs:
     - path: data/processed
-      md5: 7afcde3cb9a720b3bc8f1ac0551c35bc.dir
-      size: 429332
+      md5: d013a3261f16fa1e676635e707f629e2.dir
+      size: 478706
       nfiles: 1
