@@ -29,6 +29,15 @@ dvc init
 python -m python_coreml_stable_diffusion.torch2coreml --convert-unet --convert-text-encoder --convert-vae-decoder --convert-safety-checker -o models
 ```
 
+For convenience you could add this to `dvc.yaml`
+
+```yaml
+  convert_model:
+    cmd: python -m python_coreml_stable_diffusion.torch2coreml --convert-unet --convert-text-encoder --convert-vae-decoder --convert-safety-checker -o models 
+    outs:
+      - models
+```
+
 ## Usage
 
 ```bash

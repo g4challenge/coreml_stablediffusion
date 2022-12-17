@@ -1,14 +1,11 @@
 
 
 stages:
-  convert_model:
-    cmd: python -m python_coreml_stable_diffusion.torch2coreml --convert-unet --convert-text-encoder --convert-vae-decoder --convert-safety-checker -o models 
-    outs:
-      - models
+
   generate_images:
     params:
       - prompt
-    cmd: python -m python_coreml_stable_diffusion.pipeline -i models -o data/processed --compute-unit ALL --seed 193 --prompt '${prompt}'
+    cmd: python -m python_coreml_stable_diffusion.pipeline -i models -o data/processed --compute-unit CPU_AND_GPU --seed 193 --prompt '${prompt}'
     deps:
       - models
     outs:
